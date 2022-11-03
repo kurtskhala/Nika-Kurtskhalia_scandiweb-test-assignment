@@ -1,0 +1,145 @@
+.app-cartPage-item{
+    /* height: 190px; */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.app-cartPage-title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+
+    margin: 0;
+    padding: 30px 0;
+    text-transform: uppercase;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    color: #1D1F22;
+    border-bottom: 1px solid #E5E5E5;
+
+}
+
+.app-cartPage-item-attribute-label {   
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+
+    color: #1D1F22;
+}
+
+.app-cartPage-item-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 82%;
+}
+
+.app-cartPage-item-attribute-values {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.app-cartPage-item-attribute-value {
+    font-weight: 400;
+    font-size: 14px;
+
+    color: #1D1F22;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #1D1F22;
+    width: 45px;
+    margin: 2px 4px 2px 0;
+    height: 30px;
+}
+
+.app-cartPage-item-attribute-color-value {
+    width: 25px;
+    height: 25px;
+    margin: 2px 4px 2px 0;
+
+}
+
+.app-cartPage-item-attribute-value--selected {
+    color: white;
+    background-color: #1D1F22;
+}
+.app-cartPage-item-attribute-color-value--selected {
+    border: 2px solid #5ECE7B;
+}
+
+.app-cartPage-item-increment-decrement {
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.app-cartPage-item-increment-decrement-symbol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #1D1F22;
+    cursor: pointer;
+}
+
+.app-cartPage-item-photo {
+    width: 121px;
+    height: 190px;
+    object-fit: scale-down;
+}
+
+.app-cartPage-item-brand {
+    font-weight: 600;
+    font-size: 30px;
+
+    color: #1D1F22;
+}
+.app-cartPage-item-name {
+    font-weight: 400;
+    font-size: 30px;
+
+    color: #1D1F22;
+}
+.app-cartPage-item-price-value {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+
+    color: #1D1F22;
+}
+
+.app-cartPage-info {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #1D1F22;
+    padding-left: 15px;
+}
+
+.app-cartPage-info-label {
+    display: inline-block;
+    width: 10%;
+}
+
+.app-cartPage-info-value {
+    font-weight: 600;
+}
+
+.app-cartPage-button {
+    margin: 20px 15px;
+    width: 20%;
+    cursor: pointer;
+}

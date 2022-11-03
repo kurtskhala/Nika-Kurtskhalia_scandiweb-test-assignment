@@ -1,0 +1,14 @@
+.app-button {
+    width: 40%;
+    height: 40px;
+    border: none;
+    background: #5ECE7B;
+    color: #FFFFFF;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    display: inline-block;
+    margin: 10px;
+}

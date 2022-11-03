@@ -1,0 +1,133 @@
+.app-product {
+    padding-top: 40px;
+    display: flex;
+}
+
+.app-product-info-brand{
+    font-weight: 600;
+    font-size: 30px;
+
+    color: #1D1F22;
+}
+
+.app-product-info-name{
+    font-weight: 400;
+    font-size: 30px;
+
+    color: #1D1F22;
+}
+
+.app-product-info-attribute-label{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+
+    color: #1D1F22;
+}
+
+.app-product-info-price-value{
+    margin: 25px 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 18px;
+
+    color: #1D1F22;
+}
+
+.app-product-gallery {
+    width: 70%;
+    display: inline-block;
+}
+
+.app-product-gallery-1 {
+    display: flex;
+}
+
+.app-product-gallery-main-photo {
+    width: 550px;
+    margin-left: 10px;
+}
+
+.app-product-gallery-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.bibo {
+    display: inline-block;
+}
+.app-product-gallery-side-photo {
+    width: 80px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.app-product-info {
+    width: 25%;
+    display: inline-block;
+}
+
+.app-product-info-attribute-values {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.app-product-info-attribute-value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #1D1F22;
+    width: 50px;
+    margin: 5px 10px 5px 0;
+    height: 35px;
+    cursor: pointer;
+}
+
+.app-product-info-attribute-value--selected {
+    color: white;
+    background-color: #1D1F22;
+}
+.app-product-info-attribute-vlue--selected {
+    border: 2px solid #5ECE7B;
+}
+
+.app-product-info-button--addToCart {
+    margin: 10px 0;
+    padding: 16px 32px;
+    border: none;
+    width: 292px;
+    height: 52px;
+    color: white;
+    cursor: pointer;
+
+    background: #5ECE7B;
+}
+
+.app-photo-blur {
+    opacity: 0.5;
+}
+
+.app-productPage-out-of-stock-true {
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    font-weight: 500;
+    font-size: 35px;
+
+    color: #8D8F9A;
+}
+
+@media only screen and (max-width: 1000px) {
+    .app-product-gallery-main-photo {
+        width: 400px;
+    }
+}
+@media only screen and (max-width: 820px) {
+    .app-product {
+        flex-direction: column;
+    }
+
+    .app-product-info {
+        width: 70%;
+    }
+}

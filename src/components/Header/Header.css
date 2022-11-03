@@ -1,0 +1,50 @@
+.app-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.app-header-nav {
+    display: flex;
+    width: 33%;
+}
+
+.app-header-nav a {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0 16px;
+    cursor: pointer;
+}
+
+.inactive{
+    text-decoration: none;
+    color: #1D1F22;
+}
+
+.app-header-logo {
+    width: 33%;
+}
+
+.active {
+    font-weight: 600;
+    color: #5ECE7B;
+    text-decoration: underline;
+    text-underline-offset: 35px;
+}
+
+.app-header-rightSide {
+    height: 50%;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+@media only screen and (max-width: 600px) {
+    .app-header-logo {
+        display: none;
+    }
+}

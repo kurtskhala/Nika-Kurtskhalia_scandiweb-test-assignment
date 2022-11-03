@@ -1,0 +1,43 @@
+.app-header-currencies {
+    width: 50px;
+    top: 30px;
+    z-index: 1;
+    background-color: white;
+}
+
+.app-header-currencies--item{
+    cursor: pointer;
+    padding: 7px 10px 7px 10px;
+}
+
+.app-header-currencies--item-selected{
+    padding: 7px 10px 7px 10px;
+    pointer-events: none;
+}
+
+.app-header-currencies--items{
+    width: 80px;
+    position: absolute;
+}
+.app-header-currencies--item:hover {
+    background: #EEEEEE;
+}
+.app-header-currencies--items{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+}
+
+.app-header-currencies--selected img{
+    margin-left: 5px;
+}
+
+.app-header-currencies--selected {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    cursor: pointer;
+    width: 20px;
+    /* justify-content: center; */
+}

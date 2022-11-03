@@ -1,0 +1,107 @@
+.app-header-cartDropDown {
+    z-index: 1000;
+    position: relative;
+    text-align: left;
+}
+
+.app-header-cartDropDown-bag {
+    margin-left: 10px;
+}
+.app-header-cartDropDown-bag h6{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+}
+
+.app-header-cartDropDown-logo{
+    cursor: pointer;
+}
+
+.app-header-cartDropDown-container {
+    background-color: white;
+    position: absolute;
+    width: 325px;
+    height: 677px;
+    left: -1450%;
+    top: 51px;
+    overflow-y: scroll;
+}
+
+.app-header-cartDropDown-container-closed {
+    /* width: 100000px; */
+    display: none;
+}
+
+.app-header-cartDropdown-numOfItems {
+    z-index: -1;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #1D1F22;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    top: -45%;
+    left: 55%;
+}
+
+.app-header-cartDropDown-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+
+.app-header-cartDropDown-buttons a {
+    margin: 0;
+    width: 48%;
+
+}
+.app-header-cartDropDown-buttons a button{
+    margin: 0;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #1D1F22;
+    color: #1D1F22;
+    cursor: pointer;
+}
+
+.app-header-cartDropDown-buttons .app-button {
+    margin: 0;
+    cursor: pointer;
+}
+
+.app-header-cartDropDown-total {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+
+    color: #1D1F22;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+.app-header-cartDropDown-bag {
+    display: flex;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+
+    color: #1D1F22;
+
+}
+
+.app-header-cartDropDown-bag-numb {
+    font-weight: 400;
+    
+}

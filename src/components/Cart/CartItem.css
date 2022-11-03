@@ -1,0 +1,118 @@
+.app-cartDropDown-item{
+    /* height: 190px; */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+
+.app-cartDropDown-item-attribute-label {   
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #1D1F22;
+}
+
+.app-cartDropDown-item-price-value{
+    font-weight: 500;
+    font-size: 16px;
+
+    color: #1D1F22;
+}
+.app-cartDropDown-item-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 45%;
+}
+.app-cartDropDown-item-left h1 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+
+    color: #1D1F22;
+}
+
+.app-cartDropDown-item-attribute-values {
+    display: flex;
+    align-items: center;
+}
+
+.app-cartDropDown-item-attribute-value {
+    font-weight: 400;
+    font-size: 14px;
+
+    color: #1D1F22;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #1D1F22;
+    min-width: 24px;
+    margin: 2px 4px 2px 0;
+    height: 24px;
+}
+
+.app-cartDropDown-item-attribute-color-value {
+    width: 16px;
+    height: 16px;
+    margin: 2px 4px 2px 0;
+
+}
+
+.app-cartDropDown-item-attribute-value--selected {
+    color: white;
+    background-color: #1D1F22;
+}
+.app-cartDropDown-item-attribute-color-value--selected {
+    border: 2px solid #5ECE7B;
+}
+
+.app-cartDropDown-item-increment-decrement {
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.app-cartDropDown-item-increment-decrement-symbol {
+    display: flex;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #1D1F22;
+    cursor: pointer;
+}
+
+.app-cartDropDown-item-photo {
+    width: 121px;
+    height: 190px;
+    object-fit: scale-down;
+}
+
+.app-cartPage-item-image {
+    position: relative;
+}
+
+.app-cartPage-changePhoto {
+    display: flex;
+    position: absolute;
+    top: 165px;
+    left: 70px;
+}
+
+.app-cartPage-changePhoto button {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    background: rgba(0, 0, 0, 0.73);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+}
