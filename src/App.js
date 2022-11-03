@@ -132,6 +132,7 @@ class App extends React.Component {
             </div>
             <div className={this.state.cartDropdown? 'app-body app-body-blur': 'app-body'}>
               <Routes>
+                <Route path='/' element={<Navigate to={`/${this.state.data[0].name}`}/>}></Route>
                 {
                   this.state.data.map((category) => {
                     return  <Route key={category.name} path={`/${category.name}`} element={<All cartDropdown={this.state.cartDropdown} handleCartItems={this.handleCartItems} currency={this.state.currency} data={[category]}/>}>
