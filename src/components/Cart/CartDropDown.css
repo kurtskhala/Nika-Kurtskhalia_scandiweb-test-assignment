@@ -11,6 +11,7 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 160%;
+    margin: 32px 0;
 }
 
 .app-header-cartDropDown-logo{
@@ -21,14 +22,13 @@
     background-color: white;
     position: absolute;
     width: 325px;
-    height: 677px;
+    max-height: 677px;
     left: -1450%;
     top: 51px;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 .app-header-cartDropDown-container-closed {
-    /* width: 100000px; */
     display: none;
 }
 
@@ -56,12 +56,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-bottom: 15px;
+    margin-bottom: 32px;
 }
 
 .app-header-cartDropDown-buttons a {
     margin: 0;
-    width: 48%;
+    width: 140px;
 
 }
 .app-header-cartDropDown-buttons a button{
@@ -81,14 +81,18 @@
 .app-header-cartDropDown-total {
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 500;
     font-size: 18px;
     line-height: 18px;
 
     color: #1D1F22;
     display: flex;
     justify-content: space-between;
-    margin: 0 10px;
+    margin: 0 20px 0 16px;
+}
+
+.app-header-cartDropDown-total h6 {
+    font-weight: 1000;
+    margin: 40px 0 32px 0;
 }
 
 .app-header-cartDropDown-bag {
@@ -101,7 +105,21 @@
 
 }
 
+
+
 .app-header-cartDropDown-bag-numb {
     font-weight: 400;
     
+}
+
+.app-button {
+    width: 140px;
+    height: 43px;
+    border: none;
+    background: #5ECE7B;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    padding: 0;
 }

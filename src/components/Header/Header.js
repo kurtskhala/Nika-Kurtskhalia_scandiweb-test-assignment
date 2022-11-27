@@ -1,7 +1,7 @@
 import React from 'react';
 import { Categories } from "../../gql/Query";
 import { request } from 'graphql-request';
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/logo.svg';
 import {NavLink} from "react-router-dom";
 
 

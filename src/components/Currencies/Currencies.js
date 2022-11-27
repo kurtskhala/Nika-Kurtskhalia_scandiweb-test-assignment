@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { request } from 'graphql-request';
 import { Curr } from "../../gql/Query";
-import VectorDown from '../../assets/images/Vector.png';
-import VectorUp from '../../assets/images/VectorUp.png';
+import VectorDown from '../../assets/images/Vector.svg';
+import VectorUp from '../../assets/images/VectorUp.svg';
 import './Currencies.css';
 
 
 class Currencies extends Component {
-    state = { 
+    state = {
         currencies: [],
         currency: '',
         clicked: false
@@ -20,11 +20,14 @@ class Currencies extends Component {
       }
     
       componentDidMount() {
-        request('http://localhost:4000/', Curr).then((data) => (this.setState({currencies:data.currencies, currency: data.currencies[0].symbol})))
+        request('http://localhost:4000/', Curr).then((data) => (this.setState({currencies:data.currencies})))
         document.addEventListener("mousedown", this.handleClickOutside);
         if(JSON.parse(window.localStorage.getItem('currency'))){
+          console.log(JSON.parse(window.localStorage.getItem('currency')));
           this.setState({currency: JSON.parse(window.localStorage.getItem('currency'))});
-        } 
+        } else if(this.state.currencies.length>0&&!JSON.parse(window.localStorage.getItem('currency'))) {
+          this.setState({currency: this.state.currencies[0].symbol});
+        }
       }
     
       componentWillUnmount() {

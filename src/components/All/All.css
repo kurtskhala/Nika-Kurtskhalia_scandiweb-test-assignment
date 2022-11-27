@@ -18,6 +18,16 @@
     margin-left: 10px;
 }
 
+.app-products {
+    display: flex;
+    justify-content: center;
+}
+
+.app-products-cont {
+    display: grid;
+    grid-template-columns: fit-content(300px) fit-content(300px) 1fr;
+}
+
 
 .app-product-container {
     padding: 10px;
@@ -92,4 +102,15 @@
 
 .app-image-blur {
     opacity: 0.5;
+}
+
+@media only screen and (max-width: 1000px) {
+    .app-products-cont {
+        grid-template-columns: fit-content(300px) 1fr;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .app-products-cont {
+        grid-template-columns: 1fr;
+    }
 }

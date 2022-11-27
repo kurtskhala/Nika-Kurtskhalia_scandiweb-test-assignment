@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import All from './components/All/All';
 import { request } from 'graphql-request';
-import { AllInfo, Curr } from "./gql/Query";
+import { Curr, Categories} from "./gql/Query";
 import Header from './components/Header/Header';
 import {Routes, Route, Navigate} from "react-router-dom";
 import Product from './components/Product/Product';
@@ -12,10 +12,10 @@ import CartPage from './components/Cart/CartPage';
 class App extends React.Component {
 
   state = { 
-    data: [],
     currency : '',
     cartItems : [],
-    cartDropdown : false
+    cartDropdown : false,
+    categories : []
   }
 
   constructor(props) {
@@ -31,6 +31,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    const uri = "http://localhost:4000/";
     if(window.localStorage.getItem('cartItems')){
       this.setState({cartItems: JSON.parse(window.localStorage.getItem('cartItems'))});
     }
@@ -38,9 +39,9 @@ class App extends React.Component {
     if(JSON.parse(window.localStorage.getItem('currency'))){
       this.setState({currency: JSON.parse(window.localStorage.getItem('currency'))});
     } else {
-      request('http://localhost:4000/', Curr).then((data) => (this.setState({currency: data.currencies[0].symbol})))
+      request(uri, Curr).then((data) => (this.setState({currency: data.currencies[0].symbol})))
     }
-    request('http://localhost:4000/', AllInfo).then((data) => (this.setState({data: data.categories})));
+    request(uri, Categories).then((data) => (this.setState({categories: data})));
     document.addEventListener("mousedown", this.handleClickOutside);
   }
 
@@ -78,7 +79,7 @@ class App extends React.Component {
       }));
       if(item.q-1 === 0) {
         this.setState({
-          cartItems : this.state.cartItems.filter(data => data.id != item.id)
+          cartItems : this.state.cartItems.filter(data => data.id !== item.id)
         })
       }
   }
@@ -114,7 +115,7 @@ class App extends React.Component {
             )
           }));
         } else {
-          this.setState({cartItems: [...this.state.cartItems, item]});
+             this.setState({cartItems: [...this.state.cartItems, item]});
         }
   }
 
@@ -123,7 +124,7 @@ class App extends React.Component {
   }
 
   render() {
-    if(this.state.data.length>0){
+    if(this.state.categories.categories){
       return (
         <div className='container'>
           <div className="app">
@@ -132,17 +133,17 @@ class App extends React.Component {
             </div>
             <div className={this.state.cartDropdown? 'app-body app-body-blur': 'app-body'}>
               <Routes>
-                <Route path='/' element={<Navigate to={`/${this.state.data[0].name}`}/>}></Route>
+                <Route path='/' element={<Navigate to={`/${this.state.categories.categories[0].name}`}/>}></Route>
                 {
-                  this.state.data.map((category) => {
+                  this.state.categories.categories.map((category) => {
                     return  <Route key={category.name} path={`/${category.name}`} element={<All cartDropdown={this.state.cartDropdown} handleCartItems={this.handleCartItems} currency={this.state.currency} data={[category]}/>}>
                             </Route>
                   })
                 }
                 {
-                  this.state.data.map((category) => {
+                  this.state.categories.categories.map((category) => {
                     return category.products.map((product) => {
-                      return <Route key={product.id} path= {`/${category.name}/${product.id}`} element={<Product cartDropdown={this.state.cartDropdown} handleCartItems={this.handleCartItems} currency={this.state.currency} data={product} />}></Route>
+                      return <Route key={product.id} path= {`/${category.name}/${product.id}`} element={<Product cartDropdown={this.state.cartDropdown} handleCartItems={this.handleCartItems} currency={this.state.currency} data={product.id} />}></Route>
                     })
                   })
                 }

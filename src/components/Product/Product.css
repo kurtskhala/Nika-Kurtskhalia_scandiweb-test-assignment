@@ -8,6 +8,7 @@
     font-size: 30px;
 
     color: #1D1F22;
+    margin: 0;
 }
 
 .app-product-info-name{
@@ -15,6 +16,7 @@
     font-size: 30px;
 
     color: #1D1F22;
+    margin: 0 0 43px 0;
 }
 
 .app-product-info-attribute-label{
@@ -44,7 +46,7 @@
 }
 
 .app-product-gallery-main-photo {
-    width: 550px;
+    width: 600px;
     margin-left: 10px;
 }
 
@@ -77,9 +79,9 @@
     align-items: center;
     justify-content: center;
     border: 1px solid #1D1F22;
-    width: 50px;
+    width: 63px;
     margin: 5px 10px 5px 0;
-    height: 35px;
+    height: 45px;
     cursor: pointer;
 }
 

@@ -1,3 +1,8 @@
+.app-cartDropDown-items{
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
 .app-cartDropDown-item{
     /* height: 190px; */
     display: flex;
@@ -25,7 +30,7 @@
 .app-cartDropDown-item-left {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     width: 45%;
 }
 .app-cartDropDown-item-left h1 {
@@ -72,10 +77,11 @@
 }
 
 .app-cartDropDown-item-increment-decrement {
-    height: 190px;
+    /* height: 190px; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .app-cartDropDown-item-increment-decrement-symbol {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import cart from '../../assets/images/cart.png';
+import cart from '../../assets/images/cart.svg';
 import './CartDropDown.css';
 import CartItem from './CartItem';
 import {Link} from "react-router-dom";

@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import Button from '../Button/Button';
 import CartItem from './CartItem';
 import './CartPage.css';
 
 class CartPage extends Component {
-    state = {  } 
     render() { 
         if(this.props.cartItems.length>0){
             return (

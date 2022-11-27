@@ -9,7 +9,7 @@ class CartItem extends Component {
     componentDidMount = () => {
         this.setState({photos: []});
         this.props.data.map(() => {
-            this.setState(prevState => ({
+            return this.setState(prevState => ({
                 photos: [...prevState.photos, 0]
               }))
         })
@@ -39,7 +39,6 @@ class CartItem extends Component {
     handleDecrement = (item,j) => {
         this.props.handleDec(item);
         if(item.q-1 === 0) {
-            console.log(this.state.photos);
             this.setState({
                 photos: this.state.photos.filter((item,i) => i!==j)
             });
@@ -49,7 +48,7 @@ class CartItem extends Component {
     render() {
         if(this.props.data.length>0){
         return (
-            <div className=''>
+            <div className={`app-${this.props.nameOfClass}-items`}>
                 {
                     this.props.data.map((item,j) => {
                        return <div key={item.id} className={`app-${this.props.nameOfClass}-item`}>
